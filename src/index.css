@@ -1,0 +1,17 @@
+@font-face {
+  font-family: LemonMilk;
+  src: url("assets/LEMONMILK-Regular.otf") format("opentype");
+}
+
+body{
+  background: linear-gradient(#000002, #24273C);
+  height: 10000px;
+  width: 100%;
+}
+
+#root{
+  background-image: url("./assets/Rectangle.svg");
+  background-size: contain;
+  height: 10000px;
+  background-repeat: no-repeat;
+}
