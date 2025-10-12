@@ -1,24 +1,12 @@
-<svg width="1920" height="2187" viewBox="0 0 1920 2187" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g filter="url(#filter0_fn_54_84)">
-<rect x="2222" y="1631" width="2770" height="2770" transform="rotate(180 2222 1631)" fill="url(#pattern0_54_84)"/>
+<svg width="1920" height="2099" viewBox="0 0 1920 2099" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_f_54_84)">
+<rect x="2275" y="1543" width="2770" height="2770" transform="rotate(180 2275 1543)" fill="url(#pattern0_54_84)"/>
 </g>
 <defs>
-<filter id="filter0_fn_54_84" x="-1103.4" y="-1694.4" width="3880.8" height="3880.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_54_84" x="-1050.4" y="-1782.4" width="3880.8" height="3880.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="277.7" result="effect1_foregroundBlur_54_84"/>
-<feTurbulence type="fractalNoise" baseFrequency="0.66666668653488159 0.66666668653488159" stitchTiles="stitch" numOctaves="3" result="noise" seed="5291" />
-<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
-<feComponentTransfer in="alphaNoise" result="coloredNoise1">
-<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
-</feComponentTransfer>
-<feComposite operator="in" in2="effect1_foregroundBlur_54_84" in="coloredNoise1" result="noise1Clipped" />
-<feFlood flood-color="rgba(0, 0, 0, 0.58)" result="color1Flood" />
-<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
-<feMerge result="effect2_noise_54_84">
-<feMergeNode in="effect1_foregroundBlur_54_84" />
-<feMergeNode in="color1" />
-</feMerge>
 </filter>
 <pattern id="pattern0_54_84" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_54_84" transform="scale(0.0005)"/>
