@@ -1,20 +1,28 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Nav from "./Nav.jsx"
-import Home from "./Home.jsx"
+import Home from "./components/en/Home.jsx"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/en/home",
     element: <Home/>,
-    children:[
-      {
-        path: "test",
-        element: <Nav />,
-      }
-    ]
+    // children:[
+    //   {
+    //     path: "home",
+    //     element: <Home/>,
+    //   }
+    // ],
+  },{
+    path: "/pl/home",
+    element: <Home/>,
+    // children:[
+    //   {
+    //     path: "home",
+    //     element: <Home/>,
+    //   }
+    // ]
   }
 ])
 

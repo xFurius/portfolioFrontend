@@ -3,15 +3,39 @@
   src: url("assets/LEMONMILK-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: LemonMilkBold;
+  src: url("assets/LEMONMILK-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("assets/Roboto-Regular.ttf") format("truetype");
+}
+
+
+*{
+    margin: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body{
   background: linear-gradient(#000002, #24273C);
-  height: 10000px;
   width: 100%;
+  font-family: LemonMilk;
 }
 
 #root{
   background-image: url("./assets/Rectangle.svg");
   background-size: contain;
-  height: 10000px;
   background-repeat: no-repeat;
+}
+
+span{
+  color: white;
 }
