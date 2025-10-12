@@ -1,8 +1,8 @@
-import "../css/nav.css"
-import Globe from "../assets/globe.svg?react"
-import LinkedIn from "../assets/linkedin.svg?react"
-import GitHub from "../assets/github.svg?react"
-import Mail from "../assets/mail.svg?react"
+import "../../css/nav.css"
+import Globe from "../../assets/globe.svg?react"
+import LinkedIn from "../../assets/linkedin.svg?react"
+import GitHub from "../../assets/github.svg?react"
+import Mail from "../../assets/mail.svg?react"
 
 export default function Nav(){
     const scrollIntoView = (id) => {
