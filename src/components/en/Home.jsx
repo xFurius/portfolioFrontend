@@ -1,6 +1,6 @@
 import "../../css/home.css"
 import Nav from "./Nav";
-import AboutMe from "../AboutMe";
+import AboutMe from "./AboutMe";
 import PortfolioSVG from "../../assets/portfolio.svg?react"
 import Divider from "../../assets/sectionDvdr.svg?react"
 import SectionIndicator from "../SectionIndicator";
