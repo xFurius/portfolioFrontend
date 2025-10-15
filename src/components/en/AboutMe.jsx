@@ -14,8 +14,7 @@ export default function AboutMe(){
                 <span className="span-aboutme">
                     I’m a Computer Science student with software engineering specialization at Lublin University of Technology.
                     I attended Technical School in Chełm during which i was a two times scholarship holder in “Lubelska Kuźnia Talentów” 
-                    and graduated with technical diploma in software engineering. I mainly specialize in back-end development but I’m also able to make front-end 
-                    when need arises. I recently passed a Certified Cloud Practitioner CLF-C02 certification and currently 
+                    and graduated with technical diploma in software engineering. I'm a Full-Stack developer with emphasis on backend development. I recently passed a Certified Cloud Practitioner CLF-C02 certification and currently 
                     I’m preparing for Certified Solutions Architect - Associate SAA-C03 certificate. I'm always eager to learn new things and improve my skills.
                 </span>
             </div>

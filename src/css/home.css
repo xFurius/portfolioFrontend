@@ -5,5 +5,9 @@ section{
 }
 
 main section svg{
-    margin-top: 100px;
+    margin-top: 12vh;
+}
+
+.divider{
+    margin-top: 24vh;
 }

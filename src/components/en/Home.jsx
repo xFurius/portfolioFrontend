@@ -60,7 +60,7 @@ export default function Home(){
             }
         });
         };
-    }, []);
+    });
         
     return(
         <>
@@ -75,19 +75,19 @@ export default function Home(){
                 </section>
                 <section ref={section1} id="section1">
                     <AboutMe/>
-                    <Divider/>
+                    <Divider className="divider"/>
                 </section>
                 <section ref={section2} id="section2">
                     <Skills/>
-                    <Divider/>
+                    <Divider className="divider"/>
                 </section>
                 <section ref={section3} id="section3">
                     <PortfolioSVG/>
-                    <Divider/>
+                    <Divider className="divider"/>
                 </section>
                 <section ref={section4} id="section4">
                     <PortfolioSVG/>
-                    <Divider/>
+                    <Divider className="divider"/>
                 </section>
             </main>
         </>

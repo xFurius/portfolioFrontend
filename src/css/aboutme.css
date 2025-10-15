@@ -1,8 +1,8 @@
 .about-wrapper div:first-child{
     display: flex;
     align-items: center;
-    width: 1120px;
-    margin-top: 100px;
+    width: 100%;
+    margin-top: 24vh;
     font-family: LemonMilkBold;
     margin-bottom: 100px;
 }
