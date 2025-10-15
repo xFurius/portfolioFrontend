@@ -3,8 +3,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 1120px;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 24vh;
 }
 
 .skills-wrapper::after{
