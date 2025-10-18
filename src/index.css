@@ -16,8 +16,8 @@
 
 *{
     margin: 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 *::-webkit-scrollbar {
@@ -28,6 +28,7 @@ body{
   background: linear-gradient(#000002, #24273C);
   width: 100%;
   font-family: LemonMilk;
+  overflow-x: hidden;
 }
 
 #root{
@@ -38,4 +39,8 @@ body{
 
 span{
   color: white;
+}
+
+button{
+  cursor: pointer;
 }

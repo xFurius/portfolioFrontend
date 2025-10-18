@@ -2,6 +2,7 @@ import "../../css/home.css"
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
+import Projects from "./Projects";
 import PortfolioSVG from "../../assets/portfolio.svg?react"
 import Divider from "../../assets/sectionDvdr.svg?react"
 import SectionIndicator from "../SectionIndicator";
@@ -82,7 +83,7 @@ export default function Home(){
                     <Divider className="divider"/>
                 </section>
                 <section ref={section3} id="section3">
-                    <PortfolioSVG/>
+                    <Projects/>
                     <Divider className="divider"/>
                 </section>
                 <section ref={section4} id="section4">

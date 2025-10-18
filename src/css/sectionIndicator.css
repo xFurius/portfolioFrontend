@@ -7,6 +7,7 @@
     left: 93%;
     top: 50%;
     transform: scale(-1, 1);
+    z-index: 1;
 }
 
 .dot {
