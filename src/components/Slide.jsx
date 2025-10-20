@@ -1,6 +1,6 @@
 import "../css/slide.css"
 
-export default function Slide({img, title, desc}){
+export default function Slide({img, title, desc, href}){
     return(
         <>
             <div className="slide">
@@ -8,7 +8,7 @@ export default function Slide({img, title, desc}){
                 <div className="slide-info">
                     <span>{title}</span>
                     <span>{desc}</span>
-                    <button>See more</button>
+                    <button><a href={href}>See more</a></button>
                 </div>
             </div>
         </>
