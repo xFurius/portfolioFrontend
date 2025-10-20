@@ -9,14 +9,27 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/en/home" replace/>
   },{
-    path: "/en/home",
-    element: <Home/>,
-    // children:[
-    //   {
-    //     path: "home",
-    //     element: <Home/>,
-    //   }
-    // ],
+    path: "en/projects",
+    element: <Navigate to="/en/home" replace/>
+  },{
+    path: "en",
+    element: <Navigate to="/en/home" replace/>
+  },{
+    path: "en",
+    children:[
+      {
+        path: "home",
+        element: <Home/>
+      },{
+        path: "projects",
+        children:[
+          {
+            path: "portfolio",
+            element: <Home/>
+          }
+        ]
+      }
+    ],
   },{
     path: "/pl/home",
     element: <Home/>,
