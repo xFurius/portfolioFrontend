@@ -3,15 +3,13 @@
     width: 1120px;
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
-
 }
 
 .slide-track{
     transition: transform 0.5s ease-in-out;
- display: flex;
-  width: 3200px;
-  transition: transform 0.5s ease;
-  will-change: transform;
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
 }
 
 .slide-control button{
@@ -34,6 +32,11 @@
     margin-top: 6vh;
     margin-left: -700px;
     margin-bottom: 10vh;
+    margin-right: 10px;
+}
+
+.text-wrapper svg{
+    margin-right: 10px;
 }
 
 .text-wrapper>span{
