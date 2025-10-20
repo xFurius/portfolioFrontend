@@ -2,14 +2,12 @@ import "../../css/home.css"
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
+import Qualifications from "../en/Qualifications"
 import Projects from "./Projects";
 import PortfolioSVG from "../../assets/portfolio.svg?react"
 import Divider from "../../assets/sectionDvdr.svg?react"
 import SectionIndicator from "../SectionIndicator";
 import { useEffect, useRef } from "react";
-
-// http://localhost:5173/pl/projects
-// http://localhost:5173/en/projects
 
 export default function Home(){
     const section1 = useRef(null);
@@ -87,8 +85,7 @@ export default function Home(){
                     <Divider className="divider"/>
                 </section>
                 <section ref={section4} id="section4">
-                    <PortfolioSVG/>
-                    <Divider className="divider"/>
+                    <Qualifications/>
                 </section>
             </main>
         </>
