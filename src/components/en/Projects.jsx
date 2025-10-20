@@ -30,10 +30,9 @@ export default function Projects(){
               <span>Projects</span>
               <p>Below you can see my projects with more to come</p>
             </div>
-          <div className="slide-wrapper"> {/*tutaj zrobic zeby slide-track mial ustawiany width a podstawie tego ile slideow jest w srodku*/}
-            <div className="slide-track" style={{ transform: `translateX(-${index * 750}px)` }} ref={testRef}>
-                    <Slide img={"/image 31.png"} title={"portfolio website"} desc={"Portfolio website made using react.js"}/>
-                    <Slide img={"/image 31.png"} text={"etst"}/>
+          <div className="slide-wrapper">
+            <div className="slide-track" style={{ transform: `translateX(-${index * 750}px)`, width: `${refChildN * 800}px` }} ref={testRef}>
+                    <Slide img={"/portfolioProject.png"} title={"portfolio website"} desc={"Portfolio website made using react.js"} href={"/en/projects/portfolio"}/>
             </div>
             </div>
             <div className="slide-control">
