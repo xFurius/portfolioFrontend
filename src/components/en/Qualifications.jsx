@@ -11,7 +11,7 @@ export default function Qualifications(){
                 <p>Here you can see my work experience, education history as well as my certificates</p>
             </div>
             <div className="work-wrapper">
-                <div className="work-span-wrapper">
+                <div>
                     <span>work experience</span>
                 </div>
                 <div className="experience-wrapper">

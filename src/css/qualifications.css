@@ -14,37 +14,36 @@
     font-size: 12px;        
 }
 
+.qual-wrapper svg{
+    margin-right: 10px;
+}
+
 .qual-wrapper::after{
     content: "";
     width: 100%;
     height: 370px;
-    margin-left: 300px;
-    margin-top: -650px;
+    margin-left: 380px;
+    margin-top: -270px;
     background: url("../assets/circle.svg");
     background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
-    transform: rotate(-30deg);
-}
-
-.qual-wrapper svg{
-    margin-right: 10px;
 }
 
 .work-wrapper{
     display: flex;
     width: 1120px;
     flex-direction: column;
-    align-items: center;
     gap: 100px;
+    align-items: center;
 }
 
-.work-span-wrapper{
+.work-wrapper>div>span{
     font-family: LemonMilkBold;
     font-size: 32px;
 }
 
-.work-span-wrapper::after{
+.work-wrapper>div>span::after{
     position: absolute;
     content: "";
     margin-top: 50px;
@@ -54,17 +53,25 @@
     background: radial-gradient(circle, #F9D905 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(n){
-    display: grid;
-    grid-template-columns: 0.9fr 0.1fr;
-    width: 500px;
-    height: 200px;
+.experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    width: 1000px;
+    height: 600px;
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(2n){
-    display: grid;
-    grid-template-columns: 0.25fr 0.75fr;
-    width: 500px;
+.experience-wrapper::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 600px;
+    margin-left: 500px;
+    background: radial-gradient(circle, #F9D905 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.qual-comp-wrapper{
+    width: 50%;
 }
 
 .qual-comp-wrapper button{
@@ -81,22 +88,28 @@
 }
 
 .qual-comp-wrapper span{
-    float: left;
     display: block;
     font-size: 24px;
 }
 
 .qual-comp-wrapper span:nth-child(2){
     font-family: Roboto;
-    float: left;
-    display: block;
     font-size: 18px;
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(n)::after{
+.qual-comp-wrapper:nth-child(even) {
+    margin-left: auto;
+  
+}
+
+.qual-comp-wrapper:nth-child(even) div {
+    margin-left: auto;
+    text-align: right;
+}
+
+.qual-comp-wrapper:nth-child(odd)::after{
     position: absolute;
-    margin-top: 65px;
-    margin-left: -5px;
+    margin-top: -65px;
     content: "";
     width: 500px;
     height: 150px;
@@ -106,17 +119,23 @@
     z-index: -1;
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(2n)::after{
-    margin-left: 5px;
-    margin-top: 70px;
+.qual-comp-wrapper:nth-child(even)::after{
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 10px;
+    content: "";
+    width: 500px;
+    height: 150px;
     background: url("../assets/line2.svg");
     background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(n)::before{
+.qual-comp-wrapper:nth-child(odd)::before{
     position: absolute;
-    margin-top: 160px;
-    margin-left: 472px;
+    margin-top: 165px;
+    margin-left: 477px;
     content: "";
     width: 56px;
     height: 56px;
@@ -126,38 +145,15 @@
     z-index: 1;
 }
 
-.experience-wrapper .qual-comp-wrapper:nth-child(2n)::before{
-    margin-left: -18px;
+.qual-comp-wrapper:nth-child(even)::before{
+    position: absolute;
+    margin-left: -13px;
     margin-top: 140px;
+    content: "";
+    width: 36px;
+    height: 36px;
     background: url("../assets/qual-dot-2.svg");
     background-repeat: no-repeat;
-}
-
-.experience-wrapper{
-    display: grid;
-    height: 600px;
-}
-
-.experience-wrapper::after{
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 600px;
-    margin-left: 245px;
-    background: radial-gradient(circle, #F9D905 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.experience-wrapper .qual-comp-wrapper:nth-child(n){
-    position: relative;
-    left: -250px;
-    div{
-        grid-column: 1;
-    }
-}
-
-.experience-wrapper .qual-comp-wrapper:nth-child(2n){
-    left: 250px;
-    div{
-        grid-column: 2;
-    }
+    background-size: contain;
+    z-index: 1;
 }
