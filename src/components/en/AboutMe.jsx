@@ -1,17 +1,16 @@
-import "../../css/aboutme.css"
-
+import styles from "../../css/aboutme.module.css"
 import BeeSvg from "../../assets/bee.svg?react"
 
 export default function AboutMe(){
     return(
         <>
-        <div className="about-wrapper">
+        <div className={styles.about_wrapper}>
             <div>
                 <BeeSvg/>
                 <span>about me</span>
             </div>
             <div>
-                <span className="span-aboutme">
+                <span>
                     I’m a Computer Science student with software engineering specialization at Lublin University of Technology.
                     I attended Technical School in Chełm during which i was a two times scholarship holder in “Lubelska Kuźnia Talentów” 
                     and graduated with technical diploma in software engineering. I'm a Full-Stack developer with emphasis on backend development. I recently passed a Certified Cloud Practitioner CLF-C02 certification and currently 

@@ -36,7 +36,7 @@
     margin-right: 30px;
 }
 
-.nav-btn{
+.nav_btn{
     border: none;
     background-color: transparent;
     border-radius: 40px;
@@ -47,14 +47,8 @@
     font-size: 15px;
 }
 
-.nav-btn:hover{
+.nav_btn:hover{
     cursor: pointer;
-}
-
-button.active{
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #F9D905;
-    color: black;
 }
 
 .wrapper nav{
@@ -66,4 +60,10 @@ button.active{
 
 .links a{
     height: 22px;
+}
+
+button.active{
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #F9D905;
+    color: black;
 }

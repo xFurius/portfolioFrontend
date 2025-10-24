@@ -7,7 +7,7 @@
     border-radius: 40px;
 }
 
-.slide-info{
+.slide_info{
     position: absolute;
     top: 325px;
     width: 800px;
@@ -20,7 +20,7 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.slide-info>button{
+.slide_info>button{
     grid-column: 2;
     grid-row: 1 / span 2;
     margin-top: 25px;
@@ -33,25 +33,13 @@
     font-family: LemonMilk;
 }
 
-.slide-info span{
+.slide_info span{
     margin-left: 25px;
     text-shadow: 2px 2px 1px black;
     font-size: 30px;
 }
 
-.slide-info span:last-of-type{
+.slide_info span:last-of-type{
     font-family: Roboto;
     font-size: 16px;
 }
-
-/* .slide::after{
-    content: "";
-    position: absolute;
-    margin-top: 25vh;
-    margin-left: -40vw;
-    width: 40vw;
-    height: 150px;
-    background: linear-gradient(rgb(255,255,255,0), #000000);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-} */

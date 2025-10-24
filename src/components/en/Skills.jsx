@@ -1,10 +1,10 @@
-import "../../css/skills.css"
+import styles from "../../css/skills.module.css"
 import SkillsIcon from "../../assets/skillsIcon.svg?react"
 import SkillComponent from "../SkillComponent"
 
 export default function Skills(){
     
-    const tilt = (e) => { //ponizsze poprawic
+    const tilt = (e) => {
         const bounds = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - bounds.left;
         const y = e.clientY - bounds.top;
@@ -36,25 +36,25 @@ export default function Skills(){
 
     return(
         <>
-        <div className="skills-wrapper">
+        <div className={styles.skills_wrapper}>
                 <div>
                     <SkillsIcon />
                     <span>skills</span>
                     <p>i'm a Fullstack developer with emphasis on backend and cloud solutions</p>
                 </div>
-                <div className="skills-row">
+            <div className={styles.skills_row}>
                     <SkillComponent icon={"/skillsIcons/javaIcon.svg"} text={"java"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/goIcon.svg"} text={"go"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/jsIcon.svg"} text={"javascript"} onMouseMove={tilt} onMouseLeave={reset}/>
                 </div>
-                <div className="skills-row row">
+                <div className={`${styles.skills_row} ${styles.row}`}>
                     <SkillComponent icon={"/skillsIcons/pythonIcon.svg"} text={"python"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/sqlIcon.svg"} text={"sql"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/htmlIcon.svg"} text={"html"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/cssIcon.svg"} text={"css"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/springIcon.svg"} text={"spring boot"} onMouseMove={tilt} onMouseLeave={reset}/>
                 </div>
-                <div className="skills-row row">
+                <div className={`${styles.skills_row} ${styles.row}`}>
                     <SkillComponent icon={"/skillsIcons/ginIcon.svg"} text={"go gin"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/reactIcon.svg"} text={"react"} onMouseMove={tilt} onMouseLeave={reset}/>
                     <SkillComponent icon={"/skillsIcons/awsIcon.svg"} text={"aws"} onMouseMove={tilt} onMouseLeave={reset}/>

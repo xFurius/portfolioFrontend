@@ -1,4 +1,6 @@
-import "../../css/home.css"
+import styles from "../../css/home.module.css"
+import section from "../../css/sectionIndicator.module.css"
+import nav from "../../css/nav.module.css"
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
@@ -31,11 +33,11 @@ export default function Home(){
 
             if (dot && btn) {
                 if (entry.isIntersecting) {
-                    dot.classList.add('active');
-                    btn.classList.add('active')
+                    dot.classList.add(section["dot_active"]);
+                    btn.classList.add(nav["active"])
                 } else {
-                    dot.classList.remove('active');
-                    btn.classList.remove('active')
+                    dot.classList.remove(section["dot_active"]);
+                    btn.classList.remove(nav["active"])
                 }
             }
             });
@@ -74,15 +76,15 @@ export default function Home(){
                 </section>
                 <section ref={section1} id="section1">
                     <AboutMe/>
-                    <Divider className="divider"/>
+                    <Divider className={styles.divider}/>
                 </section>
                 <section ref={section2} id="section2">
                     <Skills/>
-                    <Divider className="divider"/>
+                    <Divider className={styles.divider}/>
                 </section>
                 <section ref={section3} id="section3">
                     <Projects/>
-                    <Divider className="divider"/>
+                    <Divider className={styles.divider}/>
                 </section>
                 <section ref={section4} id="section4">
                     <Qualifications/>

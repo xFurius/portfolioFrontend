@@ -1,4 +1,4 @@
-.about-wrapper div:first-child{
+.about_wrapper div:first-child{
     display: flex;
     align-items: center;
     width: 100%;
@@ -7,7 +7,7 @@
     margin-bottom: 100px;
 }
 
-.about-wrapper div:first-child:after{
+.about_wrapper div:first-child:after{
     content: "";
     width: 100%;
     height: 400px;
@@ -15,22 +15,23 @@
     background: url("../assets/circle.svg");
     background-repeat: no-repeat;
     position: absolute;
+    z-index: -1;
 }
 
-.about-wrapper div:last-child{
+.about_wrapper div:last-child{
     width: 1120px;
 }
 
-.about-wrapper span:nth-child(2){
+.about_wrapper span:nth-child(2){
     font-size: 64px;
 }
 
-.span-aboutme{
-    font-family: Roboto;
-    font-size: 22px;
-}
-
-.about-wrapper svg{
+.about_wrapper svg{
     margin: 0;
     margin-right: 10px;
+}
+
+.about_wrapper div:nth-child(2)>span{
+    font-family: Roboto;
+    font-size: 22px;
 }

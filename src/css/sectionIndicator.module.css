@@ -1,4 +1,4 @@
-.dot-indicator {
+.dot_indicator {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -19,7 +19,7 @@
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dot.active {
+.dot_active {
     width: 60px;
     height: 10px;
     background-color: #F9D905;

@@ -1,4 +1,4 @@
-.skills-wrapper{
+.skills_wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -6,7 +6,7 @@
     margin-top: 27vh;
 }
 
-.skills-wrapper::after{
+.skills_wrapper::after{
     position: absolute;
     content: "";
     width: 100%;
@@ -18,26 +18,26 @@
     z-index: -1;
 }
 
-.skills-wrapper>div{
+.skills_wrapper>div{
     margin-bottom: 50px;
 }
 
-.skills-wrapper>div>span:nth-child(2){
+.skills_wrapper>div>span:nth-child(2){
     font-family: LemonMilkBold;
     font-size: 64px;
 }
 
-.skills-wrapper p{
+.skills_wrapper p{
     color: white;
     font-size: 12px;
 }
 
-.skills-wrapper svg{
+.skills_wrapper svg{
     margin: 0;
     margin-right: 10px;
 }
 
-.skills-row{
+.skills_row{
     display: flex;
     gap: 30px;
 }
