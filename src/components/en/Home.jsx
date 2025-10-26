@@ -26,7 +26,7 @@ export default function Home(){
 
     useEffect(() => {
         sections.forEach(({ref, id}) => {
-            const thresholdValue = id === 'qual' ? 0.3 : 0.6
+            const thresholdValue = id === 'qual' ? 0.35 : 0.65
 
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(e => {
