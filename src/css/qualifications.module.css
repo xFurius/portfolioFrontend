@@ -30,72 +30,55 @@
     z-index: -1;
 }
 
-.work_wrapper{
+.wrapper{
     display: flex;
     width: 1120px;
     flex-direction: column;
     gap: 100px;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 300px;
 }
 
-.work_wrapper>div>span{
+.wrapper>div>span{
     font-family: LemonMilkBold;
     font-size: 32px;
 }
 
-.work_wrapper>div>span::after{
+.wrapper>div>span::after{
     position: absolute;
     content: "";
     margin-top: 50px;
-    margin-left: -340px;
-    width: 350px;
+    margin-left: var(--m-left, 0px);
+    width: var(--w, 0px);
     height: 3px;
     background: radial-gradient(circle, #F9D905 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .experience_wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 150px;
     width: 1000px;
-    height: 600px;
 }
 
 .experience_wrapper::after{
     position: absolute;
     content: "";
+    top: -50px;
+    bottom: -200px;
+    left: 50%;
     width: 10px;
-    height: 600px;
-    margin-left: 500px;
     background: radial-gradient(circle, #F9D905 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: -1;
 }
 
 .qual_comp_wrapper{
     width: 50%;
-}
-
-.qual_comp_wrapper button{
-    margin-top: 40px;
-    margin-left: 135px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    background-color: #F9D905;
-    border-radius: 40px;
-    font-family: LemonMilk;
-    align-self: center;
-}
-
-.qual_comp_wrapper:nth-child(even) button{
-    margin-top: 40px;
-    margin-left: 135px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    background-color: #F9D905;
-    border-radius: 40px;
-    font-family: LemonMilk;
-    align-self: center;
+    position: relative;
+    color: white;
+    cursor: pointer;
 }
 
 .qual_comp_wrapper span{
@@ -110,7 +93,6 @@
 
 .qual_comp_wrapper:nth-child(even) {
     margin-left: auto;
-  
 }
 
 .qual_comp_wrapper:nth-child(even) span{
@@ -118,15 +100,9 @@
     text-align: right;
 }
 
-.qual_comp_wrapper:nth-child(even) button{
-    text-align: center;
-    margin-left: 300px;
-}
-
-
 .qual_comp_wrapper:nth-child(odd)::after{
     position: absolute;
-    margin-top: -65px;
+    top: 60px;
     content: "";
     width: 500px;
     height: 150px;
@@ -138,7 +114,7 @@
 
 .qual_comp_wrapper:nth-child(even)::after{
     position: absolute;
-    margin-top: -65px;
+    top: 60px;
     margin-left: 10px;
     content: "";
     width: 500px;
@@ -149,23 +125,23 @@
     z-index: -1;
 }
 
-.qual_comp_wrapper:nth-child(odd)::before{
+.qual_comp_wrapper:nth-child(1)::before{
     position: absolute;
-    margin-top: 165px;
-    margin-left: 477px;
+    margin-left: 482px;
+    top: 162px;
     content: "";
-    width: 56px;
-    height: 56px;
+    width: 46px;
+    height: 46px;
     background: url("../assets/qual-dot.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
 }
 
-.qual_comp_wrapper:nth-child(even)::before{
+.qual_comp_wrapper:not(:first-child)::before{
     position: absolute;
-    margin-left: -13px;
-    margin-top: 140px;
+    margin-left: 487px;
+    top: 165px;
     content: "";
     width: 36px;
     height: 36px;
@@ -173,4 +149,34 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
+}
+
+.qual_comp_wrapper:nth-child(even)::before{
+    margin-left: -13px;
+    top: 135px;
+}
+
+.qual_comp_wrapper>div:nth-child(2){
+    position: relative;
+    left: var(--w-left, 0%);
+    text-align: var(--t-align, right);
+    height: 0px;
+    width: 450px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(1px);
+    margin-top: 20px;
+}
+
+.qual_comp_wrapper>div:nth-child(2) ul{
+    direction: var(--d, ltl);
+}
+
+.qual_comp_wrapper:hover div:nth-child(2){
+    height: 220px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.qual_comp_wrapper:nth-child(even){
+    position: relative;
 }

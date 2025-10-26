@@ -4,7 +4,6 @@ export default function QualComponent({text, desc}){
             <div>
                 <span>{text}</span>
                 <span>{desc}</span>
-                <button>See more</button>
             </div>
         </>
     )
