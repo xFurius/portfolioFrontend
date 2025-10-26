@@ -12,10 +12,10 @@ import SectionIndicator from "../SectionIndicator";
 import { useEffect, useRef } from "react";
 
 export default function Home(){
-    const section1 = useRef(null);
-    const section2 = useRef(null);
-    const section3 = useRef(null);
-    const section4 = useRef(null);
+    const section1 = useRef(null)
+    const section2 = useRef(null)
+    const section3 = useRef(null)
+    const section4 = useRef(null)
 
     const sections = [
         { ref: section1, id: 'aboutme' },
@@ -25,43 +25,43 @@ export default function Home(){
     ];
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-            const id = entry.target.dataset.id;
-            const dot = document.getElementById(`dot-${id}`)
-            const btn = document.getElementById(`btn-${id}`)
+        sections.forEach(({ref, id}) => {
+            const thresholdValue = id === 'qual' ? 0.3 : 0.6
 
-            if (dot && btn) {
-                if (entry.isIntersecting) {
-                    dot.classList.add(section["dot_active"]);
-                    btn.classList.add(nav["active"])
-                } else {
-                    dot.classList.remove(section["dot_active"]);
-                    btn.classList.remove(nav["active"])
-                }
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    const id = e.target.dataset.id;
+                    const dot = document.getElementById(`dot-${id}`)
+                    const btn = document.getElementById(`btn-${id}`)
+
+                    if (dot && btn) {
+                        if (e.isIntersecting) {
+                            dot.classList.add(section["dot_active"])
+                            btn.classList.add(nav["active"])
+                        } else {
+                            dot.classList.remove(section["dot_active"])
+                            btn.classList.remove(nav["active"])
+                        }
+                    }
+                })
+            },{
+                threshold: thresholdValue,
+            })
+
+            if (ref.current) {
+                ref.current.dataset.id = id
+                observer.observe(ref.current)
             }
-            });
-        },
-        {
-            threshold: 0.6,
-        }
-        );
-
-        sections.forEach(({ ref, id }) => {
-        if (ref.current) {
-            ref.current.dataset.id = id;
-            observer.observe(ref.current);
-        }
-        });
+        })
 
         return () => {
-        sections.forEach( ref  => {
-            if (ref.current) {
-            observer.unobserve(ref.current);
-            }
-        });
-        };
-    });
+            sections.forEach( ref  => {
+                if (ref.current) {
+                    observer.unobserve(ref.current)
+                }
+            })
+        }
+    })
         
     return(
         <>
