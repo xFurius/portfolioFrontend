@@ -1,4 +1,4 @@
-import styles from "../css/SectionIndicator.module.css"
+import styles from "../css/sectionIndicator.module.css"
 
 export default function SectionIndicator(){
     return(
