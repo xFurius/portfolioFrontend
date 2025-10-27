@@ -61,6 +61,7 @@
     flex-direction: column;
     gap: 150px;
     width: 1000px;
+    margin-bottom: 200px;
 }
 
 .experience_wrapper::after{
@@ -179,4 +180,35 @@
 
 .qual_comp_wrapper:nth-child(even){
     position: relative;
+}
+
+.cert_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 1120px;
+    font-size: 24px;
+    align-items: center;
+    gap: 30px;
+    font-family: Roboto;
+}
+
+.cert_wrapper > div{
+    display: flex;
+    align-items: center;
+}
+
+.cert_wrapper > div svg{
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.cert_wrapper::after{
+    content: "";
+    position: absolute;
+    background: url("../assets/cert_bg.svg") no-repeat;
+    background-size: cover;
+    filter: blur(50px);
+    margin-top: -200px;
+    width: 100%;
+    height: 700px;
 }
