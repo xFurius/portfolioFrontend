@@ -205,7 +205,7 @@
 .cert_wrapper::after{
     content: "";
     position: absolute;
-    background: url("../assets/cert_bg.svg") no-repeat;
+    background: url("../assets/cert_bg.png") no-repeat;
     background-size: cover;
     filter: blur(50px);
     margin-top: -200px;
