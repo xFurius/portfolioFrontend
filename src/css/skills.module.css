@@ -1,35 +1,13 @@
 .skills_wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    width: 1120px;
-    margin-top: 27vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+    margin-top: 15%;
+    position: relative;
 }
 
-.skills_wrapper::after{
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 900px;
-    margin-left: 80px;
-    background: url("../assets/circle.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-}
-
-.skills_wrapper>div{
-    margin-bottom: 50px;
-}
-
-.skills_wrapper>div>span:nth-child(2){
-    font-family: LemonMilkBold;
-    font-size: 64px;
-}
-
-.skills_wrapper p{
-    color: white;
-    font-size: 12px;
+.skills_wrapper > div{
+    margin-bottom: 5%;
 }
 
 .skills_wrapper svg{
@@ -37,11 +15,66 @@
     margin-right: 10px;
 }
 
-.skills_row{
-    display: flex;
-    gap: 30px;
+.skills_wrapper>div>span:nth-child(2){
+    font-size: 64px;
+    font-family: LemonMilkBold;
 }
 
-.row{
-    grid-column: 1 / span 2;
+.skills_wrapper p{
+    color: white;
+    font-size: 12px;
+}
+
+.skill_flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills_wrapper>div:first-child:after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    margin-left: 150px;
+    margin-top: -275px;
+    background: url("../assets/circle.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 900px) {
+    .skill_flex{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .skills_wrapper>div:first-child:after{
+        margin-left: 0px;
+    }
+
+    .skills_wrapper>div>span:nth-child(2){
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 450px) {
+    .skills_wrapper>div:first-child:after{
+        margin-left: -60px;
+    }
+
+    .skills_wrapper>div>span:nth-child(2){
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 380px) {
+    .skills_wrapper>div:first-child:after{
+        display: none;
+    }
+    
+    .skills_wrapper>div>span:nth-child(2){
+        font-size: 28px;
+    }
 }

@@ -6,19 +6,20 @@ import styles from "../../css/qualifications.module.css"
 export default function Qualifications(){
     return(
         <>
-            <div className={styles.qual_wrapper}>
+        <div className={styles.qual_wrapper}>
+            <div>
                 <QualIcon/>
                 <span>qualifications</span>
                 <p>Here you can see my work experience, education history as well as my certificates</p>
             </div>
             <div className={styles.wrapper}>
                 <div>
-                    <span style={{"--m-left": "-340px", "--w":"350px"}}>work experience</span>
+                    <span className={styles.wrapper_span_main} style={{"--m-left": "-340px", "--w":"350px", "--m-left-s": "-255px", "--w-s":"260px"}}>work experience</span>
                 </div>
                 <div className={styles.experience_wrapper}>
                     <div className={styles.qual_comp_wrapper}>
                         <QualComponent text={"JUL 2024 - present"} desc={"Infrastructure Monitoring Analyst, Capgemini"}/>
-                        <div style={{"--w-left": "0%", "--t-align": "left"}}>
+                        <div>
                             <ul>
                                 <li>Monitoring client's infrastructure by reacting to alerts received on PagerDuty, SolarWinds Orion, mailbox and MonteCarlo</li>
                                 <li>Monitoring workflows on Informatica and GCP Airflow</li>
@@ -28,8 +29,8 @@ export default function Qualifications(){
                         </div>
                     </div>
                     <div className={styles.qual_comp_wrapper}>
-                        <QualComponent text={"FEB 2024 - JUL 2024"} desc={"Service Desk Analys, Capgemini"}/>
-                        <div style={{"--w-left": "10%", "--d": "rtl"}}>
+                        <QualComponent text={"FEB 2024 - JUL 2024"} desc={"Service Desk Analyst, Capgemini"}/>
+                        <div style={{"--d": "rtl"}}>
                             <ul>
                                 <li>Assisting users with technical problems via phone, email and remote connection</li>
                                 <li>Tracking issues in ServiceNow</li>
@@ -39,12 +40,12 @@ export default function Qualifications(){
                     </div>
                 </div>
                 <div>
-                    <span style={{"--m-left": "-230px", "--w":"250px"}}>education</span>
+                    <span className={styles.wrapper_span_main} style={{"--m-left": "-230px", "--w":"250px", "--m-left-s": "-170px", "--w-s":"190px"}}>education</span>
                 </div>
                 <div className={styles.experience_wrapper}>
                     <div className={styles.qual_comp_wrapper}>
                         <QualComponent text={"SEP 2023 - present"} desc={"Computer Science, Lublin University of Technology"}/>
-                        <div style={{"--w-left": "0%", "--t-align": "left"}}>
+                        <div style={{"--w-left": "0%"}}>
                             <ul>
                                 <li>Bachelor's degree in Computer Science with Software Engineering specialization</li>
                                 <li>Currently enrolled</li>
@@ -63,7 +64,7 @@ export default function Qualifications(){
                     </div>
                 </div>
                 <div>
-                    <span style={{"--m-left": "-270px", "--w":"300px"}}>certificates</span>
+                    <span style={{"--m-left": "-245px", "--w":"255px", "--m-left-s": "-190px", "--w-s":"200px"}}>certificates</span>
                 </div>
                 <div className={styles.cert_wrapper}>
                     <div>
@@ -79,6 +80,7 @@ export default function Qualifications(){
                         <span>INF.04 Professional Qualification</span>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )

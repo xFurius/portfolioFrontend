@@ -1,30 +1,22 @@
 .wrapper{
-    position: fixed;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin-top: 30px;
+    position: sticky;
+    left: 0;
+    top: 10px;
     z-index: 2;
-}
-
-.wrapper > div{
-    gap: 450px;
-    height: 60px;
+    width: 100%;
     display: flex;
     background-color: rgb(14,16,25,0.6);
     border-radius: 70px;
-    justify-content: center;
+    padding: 18px;
     backdrop-filter: blur(25px);
+    align-items: center;
+    justify-content: space-between;
 }
 
 .lang, .links{
     display: flex;
-    align-items: center;
     gap: 10px;
-}
-
-.lang{
-    margin-left: 30px;
+    align-items: center;
 }
 
 .lang a{
@@ -32,8 +24,8 @@
     color: white;
 }
 
-.links{
-    margin-right: 30px;
+.links a{
+    height: 22px;
 }
 
 .nav_btn{
@@ -45,10 +37,13 @@
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: LemonMilk;
     font-size: 15px;
+    white-space: nowrap;
 }
 
-.nav_btn:hover{
-    cursor: pointer;
+button.active{
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #F9D905;
+    color: black;
 }
 
 .wrapper nav{
@@ -58,12 +53,39 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.links a{
-    height: 22px;
+
+@media (max-width: 1200px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 18px 25px;
+    }
+    
+    .lang{
+        grid-column: 1 / 2;
+        justify-self: center;
+    }
+
+    .links{
+        grid-column: 4 / 5;
+        justify-self: center;
+    }
+
+    nav{
+        grid-row: 2;
+        grid-column: 1 / 5;
+    }
+
+    .nav_btn{
+        border-radius: 20px;
+        font-size: 14px;
+        height: 30px;
+    }
 }
 
-button.active{
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #F9D905;
-    color: black;
+@media (max-width: 450px) {
+    .nav_btn{
+        font-size: 8px;
+    }
 }

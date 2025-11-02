@@ -1,4 +1,3 @@
-import styles from "../../css/home.module.css"
 import section from "../../css/sectionIndicator.module.css"
 import nav from "../../css/nav.module.css"
 import Nav from "./Nav";
@@ -7,11 +6,10 @@ import Skills from "./Skills";
 import Qualifications from "../en/Qualifications"
 import Projects from "./Projects";
 import PortfolioSVG from "../../assets/portfolio.svg?react"
-import Divider from "../../assets/sectionDvdr.svg?react"
 import SectionIndicator from "../SectionIndicator";
 import { useEffect, useRef } from "react";
 
-export default function Home(){
+export default function Home() {
     const section1 = useRef(null)
     const section2 = useRef(null)
     const section3 = useRef(null)
@@ -25,8 +23,8 @@ export default function Home(){
     ];
 
     useEffect(() => {
-        sections.forEach(({ref, id}) => {
-            const thresholdValue = id === 'qual' ? 0.23 : 0.65
+        sections.forEach(({ ref, id }) => {
+            const thresholdValue = Math.min(1, window.innerHeight / ref.current.clientHeight * 0.55);
 
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(e => {
@@ -44,7 +42,7 @@ export default function Home(){
                         }
                     }
                 })
-            },{
+            }, {
                 threshold: thresholdValue,
             })
 
@@ -55,39 +53,33 @@ export default function Home(){
         })
 
         return () => {
-            sections.forEach( ref  => {
+            sections.forEach(ref => {
                 if (ref.current) {
                     observer.unobserve(ref.current)
                 }
             })
         }
     })
-        
-    return(
+
+    return (
         <>
-            <SectionIndicator/>
-            <section>
-                <Nav/>
-            </section>
+            <SectionIndicator />
             <main>
+                <Nav />
                 <section>
-                    <PortfolioSVG/>
-                    <Divider/>
+                    <PortfolioSVG />
                 </section>
                 <section ref={section1} id="section1">
-                    <AboutMe/>
-                    <Divider className={styles.divider}/>
+                    <AboutMe />
                 </section>
                 <section ref={section2} id="section2">
-                    <Skills/>
-                    <Divider className={styles.divider}/>
+                    <Skills />
                 </section>
                 <section ref={section3} id="section3">
-                    <Projects/>
-                    <Divider className={styles.divider}/>
+                    <Projects />
                 </section>
                 <section ref={section4} id="section4">
-                    <Qualifications/>
+                    <Qualifications />
                 </section>
             </main>
         </>
