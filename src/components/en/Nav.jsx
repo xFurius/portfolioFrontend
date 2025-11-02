@@ -12,7 +12,7 @@ export default function Nav(){
     return(
         <>
         <div className={styles.wrapper}>
-            <div>
+            {/* <div> */}
                 <div className={styles.lang}>
                     <Globe/>
                     <span><a href="/pl/home">PL</a></span>
@@ -30,7 +30,7 @@ export default function Nav(){
                     <a href="https://github.com/xFurius" target="_blank"><GitHub/></a>
                     <a href="mailto:pszczola.mateusz1@gmail.com" target="_blank"><Mail/></a>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
         </>
     )

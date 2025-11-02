@@ -1,30 +1,37 @@
-.text_wrapper{
-    margin-top: 6vh;
-    margin-left: -700px;
-    margin-bottom: 10vh;
-    margin-right: 10px;
-}
-
-.text_wrapper svg{
-    margin-right: 10px;
-}
-
-.text_wrapper>span{
-    font-family: LemonMilkBold;
-    font-size: 64px;
-}
-
-.text_wrapper>p{
-    color: white;
-    font-size: 12px;        
-}
-
-.text_wrapper::after{
-    content: "";
+.projects_wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+    margin-top: 15%;
+    position: relative;
     width: 100%;
+}
+
+.projects_wrapper > div{
+    margin-bottom: 5%;
+}
+
+.projects_wrapper svg{
+    margin: 0;
+    margin-right: 10px;
+}
+
+.projects_wrapper>div>span:nth-child(2){
+    font-size: 64px;
+    font-family: LemonMilkBold;
+}
+
+.projects_wrapper p{
+    color: white;
+    font-size: 12px;
+}
+
+.projects_wrapper::after{
+    content: "";
+    width: 375px;
     height: 370px;
     margin-left: 200px;
-    margin-top: -270px;
+    margin-top: -150px;
     background: url("../assets/circle.svg");
     background-repeat: no-repeat;
     position: absolute;
@@ -32,17 +39,24 @@
 }
 
 .slide_wrapper{
+    margin-top: 5%;
     display:flex;
-    width: 1120px;
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 90%, transparent 100%);
+    overflow: hidden;
 }
+
 
 .slide_track{
     transition: transform 0.5s ease-in-out;
     display: flex;
-    transition: transform 0.5s ease;
     will-change: transform;
+}
+
+.slide_control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide_control button{
@@ -58,5 +72,47 @@
 
 .slide_control button img{
     width: 30px;
-    height: 28px;
+    height: 30px;
+}
+
+@media (max-width: 1000px) {
+    .projects_wrapper::after{
+        width: 375px;
+        margin-top: -175px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .projects_wrapper>div>span:nth-child(2){
+        font-family: LemonMilkBold;
+        font-size: 42px;
+    }
+
+    .projects_wrapper::after{
+        width: 375px;
+        margin-top: -135px;
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+    .projects_wrapper>div>span:nth-child(2){
+        font-size: 32px;
+    }
+
+    .projects_wrapper::after{
+        width: 375px;
+        margin-left: -30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .projects_wrapper::after{
+        display: none;
+    }
+
+    .projects_wrapper>div>span:nth-child(2){
+        font-size: 28px;
+    }
 }

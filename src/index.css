@@ -13,11 +13,10 @@
   src: url("assets/Roboto-Regular.ttf") format("truetype");
 }
 
-
 *{
-    margin: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  margin: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 *::-webkit-scrollbar {
@@ -26,15 +25,57 @@
 
 body{
   background: linear-gradient(#090915 0%, #191F3F 50%, #090915 100%);
-  width: 100%;
   font-family: LemonMilk;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #root{
-  background-image: url("./assets/Rectangle.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 16px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 196px;
+    position: relative;
+}
+
+section>svg{
+  margin-top: 20px;
+  width: 100%;
+}
+
+section:not(:first-of-type)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url("./assets/sectionDvdr.svg") no-repeat;
+    background-size: contain;
+}
+
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.bg img{
+    width: 100vw;
+    object-fit: cover;
 }
 
 span{
@@ -48,4 +89,36 @@ button{
 a{
   text-decoration: none;
   color: black;
+}
+
+@media (max-width: 1400px) {
+  main {
+    padding: 0 128px;
+  }
+
+  section>svg{
+    margin: 0px;
+  }
+}
+
+@media (max-width: 780px) {
+  main {
+    padding: 0 32px;
+  }
+
+  section>svg{
+    margin: -120px;
+  }
+}
+
+@media (max-width: 550px) {
+  section>svg{
+    margin: -220px;
+  }
+}
+
+@media (max-width: 400px) {
+  section>svg{
+    margin: -260px;
+  }
 }

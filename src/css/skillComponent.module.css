@@ -1,16 +1,17 @@
 .skill_main{
-    width: 200px;
     height: 150px;
+    width: 190px;
     background-color: #090915;
     display: flex;
     border-radius: 40px;
     align-items: center;
     transition: transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28), box-shadow 0.25s ease-out;
     z-index: 0;
-    gap: 30px;
     perspective: 800px;
     transform-style: preserve-3d;
     box-shadow: 0px 10px 15px 0px #000000;
+    font-family: LemonMilk;
+    will-change: transform;
 }
 
 .skill_main::after{
@@ -31,5 +32,52 @@
 }
 
 .skill_main span{
-    font-size: 1em;
+    font-size: 14px;
+    margin-left: 10%;
+}
+
+@media (max-width: 500px) {
+    .skill_main{
+        width: 155px;
+        border-radius: 30px;
+        height: 100px;
+    }
+
+    .skill_main span{
+        font-size: 10px;
+    }
+
+    .skill_main::after{
+        width: 40px;
+        height: 40px;
+        margin-left: 18px;
+    }
+
+    .skill_main img{
+        width: 25px;
+        height: 25px;
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skill_main{
+        width: 110px;
+        height: 80px;
+    }
+
+    .skill_main span{
+        font-size: 8px;
+    }
+
+    .skill_main::after{
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill_main img{
+        width: 15px;
+        height: 15px;
+        margin-left: 25px;
+    }
 }
