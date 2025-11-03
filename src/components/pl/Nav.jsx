@@ -19,10 +19,10 @@ export default function Nav(){
                     <span><a href="/en/home">EN</a></span>
                 </div>
                 <nav>
-                    <button id="btn-aboutme" className={styles.nav_btn} onClick={() => scrollIntoView('section1')}>about me</button>
-                    <button id="btn-skills" className={styles.nav_btn} onClick={() => scrollIntoView('section2')}>skills</button>
-                    <button id="btn-projects" className={styles.nav_btn} onClick={() => scrollIntoView('section3')}>projects</button>
-                    <button id="btn-qual" className={styles.nav_btn} onClick={() => scrollIntoView('section4')}>qualifications</button>
+                    <button id="btn-aboutme" className={styles.nav_btn} onClick={() => scrollIntoView('section1')}>o mnie</button>
+                    <button id="btn-skills" className={styles.nav_btn} onClick={() => scrollIntoView('section2')}>umiejętności</button>
+                    <button id="btn-projects" className={styles.nav_btn} onClick={() => scrollIntoView('section3')}>projekty</button>
+                    <button id="btn-qual" className={styles.nav_btn} onClick={() => scrollIntoView('section4')}>kwalifikacje</button>
                 </nav>
                 <div className={styles.links}>
                     <a href="https://www.linkedin.com/in/mateusz-pszczoła-328a6327b" target="_blank"><LinkedIn/></a>

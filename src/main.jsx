@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Home from "./components/en/Home.jsx"
+import HomeEN from "./components/en/Home.jsx"
+import HomePL from "./components/pl/Home.jsx"
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -15,30 +16,35 @@ const router = createBrowserRouter([
     path: "en",
     element: <Navigate to="/en/home" replace/>
   },{
+    path: "pl/projects",
+    element: <Navigate to="/pl/home" replace/>
+  },{
+    path: "pl",
+    element: <Navigate to="/pl/home" replace/>
+  },{
     path: "en",
     children:[
       {
         path: "home",
-        element: <Home/>
+        element: <HomeEN/>
       },{
         path: "projects",
         children:[
           {
             path: "portfolio",
-            element: <Home/>
+            element: <HomeEN/>
           }
         ]
       }
     ],
   },{
-    path: "/pl/home",
-    element: <Home/>,
-    // children:[
-    //   {
-    //     path: "home",
-    //     element: <Home/>,
-    //   }
-    // ]
+    path: "pl",
+    children:[
+      {
+        path: "home",
+        element: <HomePL/>,
+      }
+    ]
   }
 ])
 
